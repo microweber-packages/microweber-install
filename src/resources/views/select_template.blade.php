@@ -1,0 +1,141 @@
+@extends('install::layout')
+
+
+@section('content')
+
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
+
+    <script>
+        function installTemplate(name)
+        {
+            installTemplateDialog = mw.dialog({
+                content: '<div>Loading...</div>',
+                title: 'Installing template',
+                width: 900,
+                id: 'mw_install_template'
+            });
+
+            $.ajax({
+                url: mw.settings.site_url + '?install_template_modal=' + name,
+                type: "GET",
+                success: function (html) {
+                    installTemplateDialog.content(html);
+                    installTemplateDialog.center();
+                }
+            });
+
+            return name;
+        }
+    </script>
+    <style>
+        .template-preview {
+            width:100%;
+            height:250px;
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+    </style>
+
+    <script>
+        function showTemplatesFilter(filter) {
+            $('.js-btn-filter').removeClass('btn-primary');
+            $('.js-btn-filter').addClass('btn-outlineprimary');
+
+            if (filter == 'free') {
+                $('.js-btn-free').addClass('btn-primary');
+
+                $('.templates').hide();
+                $('.templates-free').fadeIn()
+            } else if (filter == 'paid') {
+                $('.js-btn-paid').addClass('btn-primary');
+
+                $('.templates').hide();
+                $('.templates-paid').fadeIn()
+            } else {
+                $('.templates').fadeIn();
+                $('.js-btn-all').addClass('btn-primary');
+
+            }
+        }
+    </script>
+
+    <div class="container mt-5">
+       <div class="text-center pt-5">
+           <h3 class="mb-3">Choose a template to start with</h3>
+           <h6 class="lh-1_4">Each of our premium templates contains 450+ layouts in 20 different categories. <br> By buying a premium template you are saving time and money to create any type of website.</h6>
+       </div>
+        <div class="d-flex justify-content-center py-3">
+            <span class="btn btn-sm btn-primary rounded-0 js-btn-all js-btn-filter my-3"  onclick="showTemplatesFilter('all')">ALL</span>
+            <span class="btn btn-sm btn-outlineprimary rounded-0 js-btn-free js-btn-filter my-3" onclick="showTemplatesFilter('free')">FREE</span>
+            <span class="btn btn-sm btn-outlineprimary rounded-0 js-btn-paid js-btn-filter my-3" onclick="showTemplatesFilter('paid')">PREMIUM</span>
+        </div>
+        <div class="row p-4 d-flex align-items-center gap-y-4">
+
+        @foreach($templates as $template)
+            <div class="hover-shadow-3 col-4  mt-4 templates @if($template['is_paid']) templates-paid @else templates-free @endif">
+                <div class="card rounded-0 ">
+                    <div class="card-body py-4">
+                        <div class="d-flex">
+                            <h6 class=" pl-0 col-6" >{{$template['description']}}</h6>
+
+                            <div class="col-6 pr-0 text-right">
+                                @if($template['is_paid'])
+                                    <span class="badge badge-sm badge-primary rounded-0" style="background-color: #9c00ff; font-weight: normal; font-size: 12px;">PREMIUM LICENSE</span>
+                                @else
+                                    <span class="badge badge-sm badge-success rounded-0" style="font-weight: normal; font-size: 12px; ">FREE LICENSE</span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <small class="text-muted d-block">v {{$template['version']}}</small>
+
+                        {{-- audit-test 2026-05-08 PM TASK-017 / TICKET-AB cycle-52 sweep: <img> migration. --}}
+                        <img class="template-preview" src="{{ $template['screenshot_link'] }}" alt="{{ $template['name'] ?? '' }}" loading="lazy" decoding="async">
+
+
+                        <div class="text-right d-flex align-items-center justify-content-end gap-3">
+                            @if($template['current_install'])
+                                <a href="<?php echo site_url();?>?request_template={{$template['target-dir']}}" class="btn btn-sm btn-outline-success rounded-0">
+                                    USE TEMPLATE
+                                </a>
+                            @else
+                            <button onclick="installTemplate('{{$template['name']}}')" class="btn btn-sm btn-outline-success rounded-0">
+                                INSTALL & USE TEMPLATE
+                            </button>
+                            @endif
+
+
+                            @if($template['demo_link'])
+                                <a href="{{$template['demo_link']}}" class="btn btn-sm btn-outline-primary rounded-0" target="_blank" rel="noopener noreferrer">
+                                    DEMO
+                                </a>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $( ".card" ).hover(
+                function() {
+                    $(this).addClass('shadow-lg').css('cursor', 'pointer');
+                }, function() {
+                    $(this).removeClass('shadow-lg');
+                }
+            );
+
+        });
+
+    </script>
+@endsection
