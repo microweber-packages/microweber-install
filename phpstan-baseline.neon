@@ -25,38 +25,8 @@ parameters:
 			path: src/DefaultOptionsInstaller.php
 
 		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$migrator\.$#'
-			identifier: property.notFound
-			count: 1
-			path: src/Http/Controllers/InstallController.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$module_manager\.$#'
-			identifier: property.notFound
-			count: 4
-			path: src/Http/Controllers/InstallController.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$mw_migrator\.$#'
-			identifier: property.notFound
-			count: 1
-			path: src/Http/Controllers/InstallController.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$user_manager\.$#'
-			identifier: property.notFound
-			count: 1
-			path: src/Http/Controllers/InstallController.php
-
-		-
 			message: '#^Call to an undefined method MicroweberPackages\\User\\Models\\User\:\:where\(\)\.$#'
 			identifier: method.notFound
-			count: 1
-			path: src/Http/Controllers/InstallController.php
-
-		-
-			message: '#^Call to method collect_local_data\(\) on an unknown class MicroweberPackages\\App\\Managers\\UpdateManager\.$#'
-			identifier: class.notFound
 			count: 1
 			path: src/Http/Controllers/InstallController.php
 
@@ -103,18 +73,6 @@ parameters:
 			path: src/Http/Controllers/InstallController.php
 
 		-
-			message: '#^Function mw not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/Http/Controllers/InstallController.php
-
-		-
-			message: '#^Function mw_is_installed not found\.$#'
-			identifier: function.notFound
-			count: 2
-			path: src/Http/Controllers/InstallController.php
-
-		-
 			message: '#^Function site_templates not found\.$#'
 			identifier: function.notFound
 			count: 1
@@ -125,18 +83,6 @@ parameters:
 			identifier: function.notFound
 			count: 4
 			path: src/Http/Controllers/InstallController.php
-
-		-
-			message: '#^Instantiated class MicroweberPackages\\App\\Managers\\UpdateManager not found\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/Http/Controllers/InstallController.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$module_manager\.$#'
-			identifier: property.notFound
-			count: 2
-			path: src/ModulesInstaller.php
 
 		-
 			message: '#^Function scan_for_elements not found\.$#'
@@ -163,182 +109,92 @@ parameters:
 			path: src/Schema/Countries.php
 
 		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$content_repository\.$#'
-			identifier: property.notFound
-			count: 2
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Access to an undefined property Illuminate\\Foundation\\Application\:\:\$option_manager\.$#'
+			message: '#^Access to an undefined property Modules\\Content\\Models\\Content\:\:\$is_active\.$#'
 			identifier: property.notFound
 			count: 1
 			path: src/TemplateInstaller.php
 
 		-
-			message: '#^Access to property \$content_id on an unknown class Modules\\Menu\\Models\\Menu\.$#'
-			identifier: class.notFound
+			message: '#^Access to an undefined property Modules\\Content\\Models\\Content\:\:\$is_home\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/TemplateInstaller.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Content\\Models\\Content\:\:\$parent\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/TemplateInstaller.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Content\\Models\\Content\:\:\$subtype\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/TemplateInstaller.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Content\\Models\\Content\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/TemplateInstaller.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Content\\Models\\Content\:\:\$url\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/TemplateInstaller.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Menu\\Models\\Menu\:\:\$content_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: src/TemplateInstaller.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Menu\\Models\\Menu\:\:\$is_active\.$#'
+			identifier: property.notFound
 			count: 4
 			path: src/TemplateInstaller.php
 
 		-
-			message: '#^Access to property \$content_type on an unknown class Modules\\Content\\Models\\Content\.$#'
-			identifier: class.notFound
-			count: 2
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Access to property \$is_active on an unknown class Modules\\Content\\Models\\Content\.$#'
-			identifier: class.notFound
-			count: 2
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Access to property \$is_active on an unknown class Modules\\Menu\\Models\\Menu\.$#'
-			identifier: class.notFound
-			count: 8
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Access to property \$is_home on an unknown class Modules\\Content\\Models\\Content\.$#'
-			identifier: class.notFound
-			count: 2
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Access to property \$item_type on an unknown class Modules\\Menu\\Models\\Menu\.$#'
-			identifier: class.notFound
-			count: 8
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Access to property \$parent on an unknown class Modules\\Content\\Models\\Content\.$#'
-			identifier: class.notFound
-			count: 2
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Access to property \$parent_id on an unknown class Modules\\Menu\\Models\\Menu\.$#'
-			identifier: class.notFound
+			message: '#^Access to an undefined property Modules\\Menu\\Models\\Menu\:\:\$item_type\.$#'
+			identifier: property.notFound
 			count: 4
 			path: src/TemplateInstaller.php
 
 		-
-			message: '#^Access to property \$subtype on an unknown class Modules\\Content\\Models\\Content\.$#'
-			identifier: class.notFound
+			message: '#^Access to an undefined property Modules\\Menu\\Models\\Menu\:\:\$parent_id\.$#'
+			identifier: property.notFound
 			count: 2
 			path: src/TemplateInstaller.php
 
 		-
-			message: '#^Access to property \$title on an unknown class Modules\\Content\\Models\\Content\.$#'
-			identifier: class.notFound
+			message: '#^Access to an undefined property Modules\\Menu\\Models\\Menu\:\:\$title\.$#'
+			identifier: property.notFound
 			count: 2
 			path: src/TemplateInstaller.php
 
 		-
-			message: '#^Access to property \$title on an unknown class Modules\\Menu\\Models\\Menu\.$#'
-			identifier: class.notFound
-			count: 4
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Access to property \$url on an unknown class Modules\\Content\\Models\\Content\.$#'
-			identifier: class.notFound
-			count: 2
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Call to method save\(\) on an unknown class Modules\\Content\\Models\\Content\.$#'
-			identifier: class.notFound
+			message: '#^Access to protected property Modules\\Content\\Models\\Content\:\:\$content_type\.$#'
+			identifier: property.protected
 			count: 1
 			path: src/TemplateInstaller.php
 
 		-
-			message: '#^Call to method save\(\) on an unknown class Modules\\Menu\\Models\\Menu\.$#'
-			identifier: class.notFound
-			count: 4
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Call to method setBatchRestoring\(\) on an unknown class Modules\\Restore\\Restore\.$#'
-			identifier: class.notFound
+			message: '#^Call to an undefined static method Modules\\Content\\Models\\Content\:\:where\(\)\.$#'
+			identifier: staticMethod.notFound
 			count: 1
 			path: src/TemplateInstaller.php
 
 		-
-			message: '#^Call to method setFile\(\) on an unknown class Modules\\Restore\\Restore\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Call to method setLanguage\(\) on an unknown class Modules\\Restore\\Restore\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Call to method setOvewriteById\(\) on an unknown class Modules\\Restore\\Restore\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Call to method setSessionId\(\) on an unknown class Modules\\Restore\\Restore\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Call to method setToDeleteOldContent\(\) on an unknown class Modules\\Restore\\Restore\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Call to method start\(\) on an unknown class Modules\\Restore\\Restore\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Call to static method generateSessionId\(\) on an unknown class Modules\\Backup\\SessionStepper\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Call to static method where\(\) on an unknown class Modules\\Content\\Models\\Content\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Call to static method where\(\) on an unknown class Modules\\Menu\\Models\\Menu\.$#'
-			identifier: class.notFound
+			message: '#^Call to an undefined static method Modules\\Menu\\Models\\Menu\:\:where\(\)\.$#'
+			identifier: staticMethod.notFound
 			count: 1
 			path: src/TemplateInstaller.php
 
 		-
 			message: '#^Constant DS not found\.$#'
 			identifier: constant.notFound
-			count: 1
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Instantiated class Modules\\Content\\Models\\Content not found\.$#'
-			identifier: class.notFound
-			count: 1
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Instantiated class Modules\\Menu\\Models\\Menu not found\.$#'
-			identifier: class.notFound
-			count: 4
-			path: src/TemplateInstaller.php
-
-		-
-			message: '#^Instantiated class Modules\\Restore\\Restore not found\.$#'
-			identifier: class.notFound
 			count: 1
 			path: src/TemplateInstaller.php
 
@@ -391,24 +247,6 @@ parameters:
 			path: src/resources/views/install.php
 
 		-
-			message: '#^Function get_favicon_tag not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/install.php
-
-		-
-			message: '#^Function mw_footer_scripts not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/install.php
-
-		-
-			message: '#^Function mw_header_scripts not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/install.php
-
-		-
 			message: '#^Function mw_root_path not found\.$#'
 			identifier: function.notFound
 			count: 1
@@ -446,24 +284,6 @@ parameters:
 
 		-
 			message: '#^Function _e not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layout.blade.php
-
-		-
-			message: '#^Function get_favicon_tag not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layout.blade.php
-
-		-
-			message: '#^Function mw_footer_scripts not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: src/resources/views/layout.blade.php
-
-		-
-			message: '#^Function mw_header_scripts not found\.$#'
 			identifier: function.notFound
 			count: 1
 			path: src/resources/views/layout.blade.php
